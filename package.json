@@ -1,0 +1,12 @@
+{
+  "name": "tristansm.it",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt": "~0.4.4",
+    "bower": "~1.3.3",
+    "grunt-jekyll": "~0.4.2",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-less": "~0.11.0"
+  }
+}
