@@ -1,29 +1,25 @@
 module.exports = function(grunt) {
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-jekyll');
-
+    // Project configuration.
     grunt.initConfig({
-        uglify: {
-            
-        },
-        copy: {
-            
-        },
-        jekyll: {
-            options: {
-
-            },
-            dist: {
-
-            },
-            serve: {
-
+        less: {
+            compile: {
+                files: {
+                    "./assets/css/site.css": "./_less/site.less"
+                }
             }
-        }    
+        },
+        watch: {
+            less: {
+                files: ['./_less/site.less'],
+                tasks: ['less:compile']
+            }
+        }
     });
-
-    grunt.registerTask('default', [ 'less', 'uglify', 'copy' ]);
-    grunt.registerTask('deploy', [ 'default' ]);
-});
+ 
+    // Default task. Run standard jekyll server.
+    grunt.registerTask('default', ['less:compile', 'watch']);
+ 
+    // plugin tasks
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+};

@@ -1,3 +1,12 @@
 name: tristansm.it/h
 markdown: redcarpet
 pygments: true
+exclude: [
+    '.bowerrc',
+    'bower.json',
+    'CNAME',
+    'Gruntfile.js',
+    'node_modules',
+    'package.json',
+    'README.md'
+]
