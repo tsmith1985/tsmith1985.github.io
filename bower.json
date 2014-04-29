@@ -2,7 +2,10 @@
   "name": "tristansm.it",
   "dependencies": {
     "jquery": "~2.1.0",
-    "bootstrap": "~3.1.1"
+    "bootstrap": "~3.1.1",
+    "moment": "~2.6.0",
+    "underscore": "~1.6.0",
+    "underscore.string": "~2.3.3"
   },
   "ignore": [
     "**/.*",

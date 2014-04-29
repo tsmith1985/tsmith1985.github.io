@@ -22,6 +22,8 @@
             </nav>
         </div>
     </header>
-    <div class="container">{{ content }}</div>
+    <div id="{{page.title | downcase}}" class="page container">
+        {{ content }}
+    </div>
 </body>
 </html>
