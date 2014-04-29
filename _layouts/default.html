@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
+    <title>Tristan Smith | {{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/site.css">
@@ -12,21 +12,16 @@
     <header id="header">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">{ tristansm.it/h }</a>
+                <a class="navbar-brand" href="/">{ tristansm.it/h }</a>
             </div>
             <nav>
-                <a href="#">Home</a>
-                <a class="active" href="#">Blog</a>
-                <a href="#">Resume</a>
-                <a href="#">Contact</a>
+                <a href="/" {% if page.url == '/index.html' %}class="active"{% endif %}>Home</a>
+                <a href="/blog.html" {% if page.url == '/blog.html' %}class="active"{% endif %}>Blog</a>
+                <a href="/resume.html" {% if page.url == '/resume.html' %}class="active"{% endif %}>Resume</a>
+                <a href="/contact.html" {% if page.url == '/contact.html' %}class="active"{% endif %}>Contact</a>
             </nav>
         </div>
     </header>
     <div class="container">{{ content }}</div>
-    <footer id="footer" class="container-fluid">
-        <p>
-            <a href="#">Back to top</a>    
-        </p>    
-    </footer>
 </body>
 </html>
